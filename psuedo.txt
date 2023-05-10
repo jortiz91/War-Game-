@@ -1,0 +1,53 @@
+<!-- Shuffle the deck of cards
+
+
+
+
+
+Divide the deck evenly between two players (26 cards each)
+
+
+
+
+
+While both players have cards left in their decks
+
+
+
+
+  Both players turn over the top card of their deck at the same time
+
+
+
+
+  Whoever has the higher card wins both cards and puts them at the bottom of their deck
+
+
+  If both cards are the same rank
+
+
+
+
+
+
+    Declare war--Game time! lol
+
+
+
+
+
+
+    Both players place three cards face down and flip the fourth card
+
+
+
+    The player with the higher card wins all the cards on the table and puts them at the bottom of their deck
+
+
+
+    If there is another tie.. go back to the beginning of this step until there is a winner
+
+
+
+
+The game is over when one player has all the cards, making them the winner -->

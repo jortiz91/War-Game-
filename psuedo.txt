@@ -51,3 +51,26 @@ While both players have cards left in their decks
 
 
 The game is over when one player has all the cards, making them the winner -->
+
+Additional Psuedo code and notes 
+//GLOBAL VARIABLES
+1
+2
+3
+//FUNCTIONS
+1
+2
+3
+//used Fisher-Yates Shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
+  //check deck length before pullcard and to check the deck if = 0
+
+  //compare to two cards from wardeck index3
+    //whoever wins using .push w/ if statement
+
+  8  //custom compare
+
+
+//EVENTLISTNERS
+
+//Two decks one for deckA and one deckB; render deckA and deckB

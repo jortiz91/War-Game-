@@ -374,7 +374,6 @@ const compareCards = (c1, c2) => {
   } else {
     console.log('War!')
 
-    //check deck length before pullcard and to check the deck if = 0
     let p1Wardeck = []
     let p2Wardeck = []
     for (let i = 0; i < 4; i++) {
@@ -430,11 +429,6 @@ const compareCards = (c1, c2) => {
         }
       }
     }
-
-    //compare to two cards from wardeck index3
-    //whoever wins using .push w/ if statement
-
-    //custom compare
   }
 }
 
@@ -446,7 +440,7 @@ p1card.addEventListener('click', () => {
   p2card.setAttribute('src', p2nextCard.path)
   compareCards(p1nextCard, p2nextCard)
 })
-//Two decks one for deckA and one deckB; render deckA and deckB
+
 const playButton = document.getElementById('play')
 playButton.addEventListener('click', () => {
   startGame()

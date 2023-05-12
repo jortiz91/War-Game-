@@ -371,9 +371,13 @@ const compareCards = (c1, c2) => {
     let p1Wardeck = []
     let p2Wardeck = []
     for (let i = 0; i < 4; i++) {
-      if (deckA.length === 0) {
-        alert('Player2 Wins!')
-        startGame()
+      console.log(p1Wardeck)
+      if (deckA.value > deckB.value) {
+        flipCard()
+        alert('Player1 Wins this War!')
+      } else if (deckB.value > deckA.value) {
+        flipCard()
+        alert('Player2 Wins this War!')
       }
       let drawnCard = deckA.shift()
       p1Wardeck.push(drawnCard)

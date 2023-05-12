@@ -328,7 +328,7 @@ let flipCard = () => {
   setTimeout(() => {
     p1card.setAttribute('src', 'images/backs/red.svg')
     p2card.setAttribute('src', 'images/backs/red.svg')
-  }, 500)
+  }, 3000)
 }
 const shuffle = (deck) => {
   //used Fisher-Yates Shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle

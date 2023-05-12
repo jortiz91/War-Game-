@@ -362,13 +362,11 @@ const compareCards = (c1, c2) => {
   if (c1.value > c2.value) {
     playerWon1.innerHTML = 'Player 1 Won!'
     deckA.push(c1, c2)
-    console.log(deckA.length, deckB.length)
     playerWon2.innerHTML = ''
     flipCard()
   } else if (c2.value > c1.value) {
     playerWon2.innerHTML = 'Player 2 Won!'
     deckB.push(c1, c2)
-    console.log(deckA.length, deckB.length)
     flipCard()
     playerWon1.innerHTML = ''
   } else {
@@ -405,7 +403,6 @@ const compareCards = (c1, c2) => {
       deckB.push(c1, c2)
       p1Wardeck.forEach((card) => deckB.push(card))
       p2Wardeck.forEach((card) => deckB.push(card))
-      console.log(deckA.length, deckB.length)
 
       playerWon2.innerHTML = 'Player 2 Won War'
       flipCard()

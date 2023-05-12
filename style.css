@@ -1,9 +1,14 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgb(20, 81, 157);
+background-image: url(https://img.freepik.com/premium-photo/battlefield-with-broken-tanks-from-world-war-ii-destroyed-equipment-dust-piles-debris_158863-3078.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size:cover;
+font-family: sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
 }
 
 .card {
@@ -32,7 +37,32 @@ body {
 
 h2 { 
   font-style: italic;
-  color:darkblue;
+  color:red;
   font-weight: 300;
   text-underline-position: inherit;
-}
+  font-family:  "dancing script", cursive;
+  font-size: 40px;
+    
+  }
+
+  h1 {
+    font-family: 'Bungee Outline', cursive;
+    color: blue;
+
+  }
+
+  #play {
+    font-family: "dancing script", cursive;
+  font-weight:bolder;
+  font-size:2.5rem;
+  margin-top: 30px;
+cursor: pointer;
+  }
+
+  #p1deck {
+    background-color: white;
+  }
+
+  #p2deck {
+    background-color: white;
+  }

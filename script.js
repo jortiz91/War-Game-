@@ -1,6 +1,10 @@
 //GLOBAL VARIABLES
 const p1card = document.querySelector('#p1deck')
 const p2card = document.querySelector('#p2deck')
+const playerWon1 = document.getElementById('P1-Won')
+const playerWon2 = document.getElementById('P2-Won')
+const playerScore1 = document.getElementById('player1score')
+const playerScore2 = document.getElementById('player2score')
 let deckB = []
 let deckA = []
 let p1nextCard
@@ -320,6 +324,7 @@ const deck = [
   }
 ]
 //FUNCTIONS
+
 let flipCard = () => {
   setTimeout(() => {
     p1card.setAttribute('src', 'images/backs/red.svg')
@@ -355,15 +360,17 @@ const playCard = (playerDeck) => {
 
 const compareCards = (c1, c2) => {
   if (c1.value > c2.value) {
-    console.log('player1 Wins')
+    playerWon1.innerHTML = 'Player 1 Won!'
     deckA.push(c1, c2)
     console.log(deckA.length, deckB.length)
+    playerWon2.innerHTML = ''
     flipCard()
   } else if (c2.value > c1.value) {
-    console.log('Player2 Wins')
+    playerWon2.innerHTML = 'Player 2 Won!'
     deckB.push(c1, c2)
     console.log(deckA.length, deckB.length)
     flipCard()
+    playerWon1.innerHTML = ''
   } else {
     console.log('War!')
 
@@ -371,13 +378,10 @@ const compareCards = (c1, c2) => {
     let p1Wardeck = []
     let p2Wardeck = []
     for (let i = 0; i < 4; i++) {
-      console.log(p1Wardeck)
-      if (deckA.value > deckB.value) {
-        flipCard()
-        alert('Player1 Wins this War!')
-      } else if (deckB.value > deckA.value) {
-        flipCard()
-        alert('Player2 Wins this War!')
+      if (deckA.length === 0) {
+        alert('Player2 Wins!')
+        startGame()
+        return
       }
       let drawnCard = deckA.shift()
       p1Wardeck.push(drawnCard)
@@ -396,12 +400,15 @@ const compareCards = (c1, c2) => {
       p1Wardeck.forEach((card) => deckA.push(card))
       p2Wardeck.forEach((card) => deckA.push(card))
       console.log(deckA.length, deckB.length)
+      playerWon1.innerHTML = 'Player 1 Won War'
       flipCard()
     } else if (p2Wardeck[3].value > p1Wardeck[3].value) {
       deckB.push(c1, c2)
       p1Wardeck.forEach((card) => deckB.push(card))
       p2Wardeck.forEach((card) => deckB.push(card))
       console.log(deckA.length, deckB.length)
+
+      playerWon2.innerHTML = 'Player 2 Won War'
       flipCard()
     } else {
       for (let i = 0; i < 4; i++) {
@@ -445,5 +452,3 @@ playButton.addEventListener('click', () => {
   startGame()
   alert('Deck is Dealt!')
 })
-
-//DRY- ?? WAR inside itself (recursive)

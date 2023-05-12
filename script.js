@@ -3,8 +3,7 @@ const p1card = document.querySelector('#p1deck')
 const p2card = document.querySelector('#p2deck')
 const playerWon1 = document.getElementById('P1-Won')
 const playerWon2 = document.getElementById('P2-Won')
-const playerScore1 = document.getElementById('player1score')
-const playerScore2 = document.getElementById('player2score')
+
 let deckB = []
 let deckA = []
 let p1nextCard
@@ -329,7 +328,7 @@ let flipCard = () => {
   setTimeout(() => {
     p1card.setAttribute('src', 'images/backs/red.svg')
     p2card.setAttribute('src', 'images/backs/red.svg')
-  }, 2000)
+  }, 4000)
 }
 const shuffle = (deck) => {
   //used Fisher-Yates Shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle

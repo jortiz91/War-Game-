@@ -328,7 +328,7 @@ let flipCard = () => {
   setTimeout(() => {
     p1card.setAttribute('src', 'images/backs/red.svg')
     p2card.setAttribute('src', 'images/backs/red.svg')
-  }, 4000)
+  }, 500)
 }
 const shuffle = (deck) => {
   //used Fisher-Yates Shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -361,15 +361,17 @@ const compareCards = (c1, c2) => {
   if (c1.value > c2.value) {
     playerWon1.innerHTML = 'Player 1 Won!'
     deckA.push(c1, c2)
+
     playerWon2.innerHTML = ''
     flipCard()
   } else if (c2.value > c1.value) {
     playerWon2.innerHTML = 'Player 2 Won!'
     deckB.push(c1, c2)
+
     flipCard()
     playerWon1.innerHTML = ''
   } else {
-    console.log('War!')
+    alert('War!')
 
     let p1Wardeck = []
     let p2Wardeck = []
@@ -386,6 +388,7 @@ const compareCards = (c1, c2) => {
       if (deckB.length === 0) {
         alert('Player1 Wins!')
         startGame()
+        return
       }
       let drawnCard = deckB.shift()
       p2Wardeck.push(drawnCard)
@@ -436,7 +439,7 @@ p1card.addEventListener('click', () => {
   p2card.setAttribute('src', p2nextCard.path)
   compareCards(p1nextCard, p2nextCard)
 })
-
+//Two decks one for deckA and one deckB; render deckA and deckB
 const playButton = document.getElementById('play')
 playButton.addEventListener('click', () => {
   startGame()

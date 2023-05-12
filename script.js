@@ -1,4 +1,3 @@
-//GLOBAL VARIABLES
 const p1card = document.querySelector('#p1deck')
 const p2card = document.querySelector('#p2deck')
 const playerWon1 = document.getElementById('P1-Won')
@@ -322,7 +321,6 @@ const deck = [
     suit: 'Diamonds'
   }
 ]
-//FUNCTIONS
 
 let flipCard = () => {
   setTimeout(() => {
@@ -431,7 +429,6 @@ const compareCards = (c1, c2) => {
   }
 }
 
-//EVENTLISTNERS
 p1card.addEventListener('click', () => {
   p1nextCard = playCard(deckA)
   p1card.setAttribute('src', p1nextCard.path)
